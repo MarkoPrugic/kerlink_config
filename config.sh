@@ -15,7 +15,7 @@ PLAVA='\033[0;34m'
 NC='\033[0m' # Bez boje
 
 log_info()    { echo -e "${PLAVA}[INFO]${NC}  $1"; }
-log_ok()      { echo -e "${ZELENA}[U SPEH]${NC} $1"; }
+log_ok()      { echo -e "${ZELENA}[USPEH]${NC} $1"; }
 log_warn()    { echo -e "${ZUTA}[PAŽNJA]${NC} $1"; }
 log_error()   { echo -e "${CRVENA}[GREŠKA]${NC} $1"; }
 
@@ -109,8 +109,8 @@ echo "--------------------------------------------------"
 
 log_info "[LoRa] Unesite podatke za konfiguraciju forwarder-a:"
 
-read -rp "$(echo -e ${PLAVA}Adresa servera:${NC} ) " SERVER
-: "${SERVER:?Adresa servera je obavezna!}"
+read -rp "$(echo -e ${PLAVA}Adresa servera [89.216.124.213]:${NC} ) " SERVER
+SERVER=${SERVER:-89.216.124.213}
 
 read -rp "$(echo -e ${PLAVA}Uplink port [1700]:${NC} ) " UPLINK_PORT
 read -rp "$(echo -e ${PLAVA}Downlink port [1700]:${NC} ) " DOWNLINK_PORT
