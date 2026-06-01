@@ -8,16 +8,16 @@ clear
 # BOJE I FORMATIRANJE
 ########################################
 
-CRVENA='\033[0;31m'
-ZELENA='\033[0;32m'
-ZUTA='\033[1;33m'
-PLAVA='\033[0;34m'
-NC='\033[0m' # Bez boje
+CRVENA=$'\033[0;31m'
+ZELENA=$'\033[0;32m'
+ZUTA=$'\033[1;33m'
+PLAVA=$'\033[0;34m'
+NC=$'\033[0m' # Bez boje
 
-log_info()    { echo -e "${PLAVA}[INFO]${NC}     $1"; }
-log_ok()      { echo -e "${ZELENA}[OK]${NC}       $1"; }
-log_warn()    { echo -e "${ZUTA}[PAŽNJA]${NC}   $1"; }
-log_error()   { echo -e "${CRVENA}[GREŠKA]${NC}   $1"; }
+log_info()    { printf "%b%-10s%b %s\n" "${PLAVA}" "[INFO]" "${NC}" "$1"; }
+log_ok()      { printf "%b%-10s%b %s\n" "${ZELENA}" "[USPEH]" "${NC}" "$1"; }
+log_warn()    { printf "%b%-10s%b %s\n" "${ZUTA}" "[PAŽNJA]" "${NC}" "$1"; }
+log_error()   { printf "%b%-10s%b %s\n" "${CRVENA}" "[GREŠKA]" "${NC}" "$1"; }
 
 ########################################
 # Provera i pokretanje kao Root
@@ -109,11 +109,11 @@ echo "--------------------------------------------------"
 
 log_info "[LoRa] Unesite podatke za konfiguraciju forwarder-a:"
 
-read -rp "$(echo -e ${PLAVA}Adresa servera [89.216.124.213]:${NC} ) " SERVER
+read -rp "$(printf '%b' "${PLAVA}Adresa servera [89.216.124.213]:${NC} ")" SERVER
 SERVER=${SERVER:-89.216.124.213}
 
-read -rp "$(echo -e ${PLAVA}Uplink port [1700]:${NC} ) " UPLINK_PORT
-read -rp "$(echo -e ${PLAVA}Downlink port [1700]:${NC} ) " DOWNLINK_PORT
+read -rp "$(printf '%b' "${PLAVA}Uplink port [1700]:${NC} ")" UPLINK_PORT
+read -rp "$(printf '%b' "${PLAVA}Downlink port [1700]:${NC} ")" DOWNLINK_PORT
 
 UPLINK_PORT=${UPLINK_PORT:-1700}
 DOWNLINK_PORT=${DOWNLINK_PORT:-1700}
