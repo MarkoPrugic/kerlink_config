@@ -143,18 +143,13 @@ log_ok "[systemd] Servis je uspešno pokrenut i dodat u auto-start."
 ########################################
 
 echo ""
-echo "=================================================="
 log_ok "Instalacija i podešavanje su završeni!"
-echo "=================================================="
-echo ""
 
-read -rp "$(echo -e ${ZUTA}Da li želite da ponovo pokrenete sistem (reboot) sada? [y/N]:${NC} ) " ans
+PROMPT_REBOOT="${ZUTA}Da li želite da ponovo pokrenete sistem (reboot) sada? [y/N]:${NC} "
+read -rp "$PROMPT_REBOOT" ans
 
 if [[ "${ans,,}" == "y" ]]; then
-    echo ""
     log_warn "Sistem se ponovo pokreće za 5 sekundi..."
     sleep 5
     reboot
-else
-    log_info "Instalacija završena bez ponovnog pokretanja."
 fi
