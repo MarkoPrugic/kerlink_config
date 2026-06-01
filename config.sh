@@ -14,10 +14,10 @@ ZUTA='\033[1;33m'
 PLAVA='\033[0;34m'
 NC='\033[0m' # Bez boje
 
-log_info()    { echo -e "${PLAVA}[INFO]${NC}  $1"; }
-log_ok()      { echo -e "${ZELENA}[USPEH]${NC} $1"; }
-log_warn()    { echo -e "${ZUTA}[PAŽNJA]${NC} $1"; }
-log_error()   { echo -e "${CRVENA}[GREŠKA]${NC} $1"; }
+log_info()    { echo -e "${PLAVA}[INFO]${NC}     $1"; }
+log_ok()      { echo -e "${ZELENA}[OK]${NC}       $1"; }
+log_warn()    { echo -e "${ZUTA}[PAŽNJA]${NC}   $1"; }
+log_error()   { echo -e "${CRVENA}[GREŠKA]${NC}   $1"; }
 
 ########################################
 # Provera i pokretanje kao Root
