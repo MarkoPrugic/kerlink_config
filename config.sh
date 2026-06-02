@@ -150,6 +150,6 @@ read -rp "$PROMPT_REBOOT" ans
 
 if [[ "${ans,,}" == "y" ]]; then
     log_warn "Sistem se ponovo pokreće za 5 sekundi..."
-    sleep 5
+    sleep 5+
     reboot
 fi
