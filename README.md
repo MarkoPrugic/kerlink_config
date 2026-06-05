@@ -22,7 +22,7 @@ wget -O configure.sh https://raw.githubusercontent.com/MarkoPrugic/kerlink_confi
 #### AUTOMATSKI MOD
 
 ```bash id="zk4gfd"
-wget -O configure.sh https://raw.githubusercontent.com/MarkoPrugic/kerlink_config/main/configure.sh && sudo bash configure.sh
+wget -O configure.sh https://raw.githubusercontent.com/MarkoPrugic/kerlink_config/main/configure.sh && sudo bash configure.sh -auto
 ```
 
 ---
