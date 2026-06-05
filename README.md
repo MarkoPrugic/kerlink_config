@@ -17,7 +17,7 @@ Skripta vodi korisnika kroz proces konfiguracije mobilne mreže, mrežnog menad�
 Preuzimanje i pokretanje skripte u jednom koraku:
 
 ```bash id="zk4gfd"
-wget -O config.sh https://raw.githubusercontent.com/MarkoPrugic/kerlink_config/main/config.sh && sudo bash config.sh
+wget -O configure.sh https://raw.githubusercontent.com/MarkoPrugic/kerlink_config/main/configure.sh && sudo bash configure.sh
 ```
 
 ---
@@ -46,15 +46,6 @@ kerlink_config/
 ---
 
 ## 🛠 Funkcionalnosti
-
-### 🎨 Sistem logovanja
-
-| Oznaka     | Opis                                      |
-| ---------- | ----------------------------------------- |
-| `[INFO]`   | Informativne poruke i tekuće operacije    |
-| `[USPEH]`  | Uspešno izvršeni koraci                   |
-| `[PAŽNJA]` | Upozorenja i akcije koje zahtevaju pažnju |
-| `[GREŠKA]` | Kritične greške i neuspešne operacije     |
 
 ### 🔐 Automatska provera privilegija
 
@@ -100,7 +91,6 @@ Nakon toga skripta:
 ### 🔄 Restart sistema
 
 * Opcioni restart po završetku konfiguracije
-* Odbrojavanje od 5 sekundi pre izvršavanja restarta
 
 ---
 
