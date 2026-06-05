@@ -19,6 +19,11 @@ Preuzimanje i pokretanje skripte u jednom koraku:
 ```bash id="zk4gfd"
 wget -O configure.sh https://raw.githubusercontent.com/MarkoPrugic/kerlink_config/main/configure.sh && sudo bash configure.sh
 ```
+#### AUTOMATSKI MOD
+
+```bash id="zk4gfd"
+wget -O configure.sh https://raw.githubusercontent.com/MarkoPrugic/kerlink_config/main/configure.sh && sudo bash configure.sh
+```
 
 ---
 
