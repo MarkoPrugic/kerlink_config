@@ -6,7 +6,7 @@
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-Automatizovana Bash skripta za brzo i jednostavno konfigurisanje Kerlink LoRaWAN gateway uređaja koji koriste KerOS 6 operativni sistem (npr. Wirnet iStation, iFemtoCell i slični modeli).
+Interaktivna Bash TUI skripta za automatsku ili ručnu konfiguraciju Kerlink LoRaWAN gateway uređaja.
 
 Skripta vodi korisnika kroz proces konfiguracije mobilne mreže, mrežnog menadžmenta i povezivanja gateway-a sa željenim LoRaWAN Network Server (LNS) okruženjem.
 
@@ -57,7 +57,7 @@ kerlink_config/
 * Provera da li je skripta pokrenuta kao root korisnik
 * Automatsko ponovno pokretanje korišćenjem `sudo` ukoliko je potrebno
 
-### 📡 oFono Provisioning konfiguracija (A1 Srbija)
+### 📡 oFono Provisioning konfiguracija
 
 * Provera postojanja provisioning fajla
 * Kreiranje rezervne kopije (`.bak`)
