@@ -58,7 +58,7 @@ FORM_USER="internet"
 FORM_PASS="internet"
 FORM_MCCMNC="220,05"
 
-LNS_SERVER="89.216.124.213"
+LNS_SERVER="lora.deltanova.rs"
 UP_PORT="1700"
 DOWN_PORT="1700"
 
